@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F163590D12BB1FEF3A75421 /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C803BAC104357CC0247614 /* Pods_TicTacToe.framework */; };
+		A110ED21284D688800BEA0BC /* xcassets-swiftui.stencil in Resources */ = {isa = PBXBuildFile; fileRef = A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */; };
 		A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */; };
 		A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8C284CD7AF00869321 /* MainView.swift */; };
 		A1E72F8F284CD7B100869321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72F8E284CD7B100869321 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		7BF54AB2EE3F71595D69E96E /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
+		A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcassets-swiftui.stencil"; sourceTree = "<group>"; };
 		A1E72F87284CD7AF00869321 /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
 		A1E72F8C284CD7AF00869321 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				B45DC3036C5F19ADE0F6CDC8 /* Pods-TicTacToe.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A110ED1F284D688800BEA0BC /* Stencils */ = {
+			isa = PBXGroup;
+			children = (
+				A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */,
+			);
+			path = Stencils;
 			sourceTree = "<group>";
 		};
 		A1E72F7E284CD7AF00869321 = {
@@ -195,6 +205,7 @@
 				A1E72FC9284CE49C00869321 /* Assets.swift */,
 				A1E72FC7284CE49C00869321 /* Fonts.swift */,
 				A1E72FC8284CE49C00869321 /* PreviewAssets.swift */,
+				A110ED1F284D688800BEA0BC /* Stencils */,
 				A1E72FCA284CE49C00869321 /* Strings.swift */,
 			);
 			path = Swiftgen;
@@ -317,6 +328,7 @@
 			files = (
 				A1E72FC3284CE3D600869321 /* Localizable.strings in Resources */,
 				A1E72FBC284CE37100869321 /* Colors.xcassets in Resources */,
+				A110ED21284D688800BEA0BC /* xcassets-swiftui.stencil in Resources */,
 				A1E72FBE284CE38900869321 /* Images.xcassets in Resources */,
 				A1E72F92284CD7B100869321 /* PreviewAssets.xcassets in Resources */,
 				A1E72F8F284CD7B100869321 /* Assets.xcassets in Resources */,
