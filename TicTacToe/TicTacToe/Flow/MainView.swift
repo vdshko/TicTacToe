@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  TicTacToe
 //
 //  Created by Vlad Shkodich on 05.06.2022.
@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    
     var body: some View {
-        Text("Hello, world!")
+        Text(L10n.App.title)
             .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

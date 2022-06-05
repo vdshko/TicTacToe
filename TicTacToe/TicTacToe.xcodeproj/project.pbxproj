@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F163590D12BB1FEF3A75421 /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C803BAC104357CC0247614 /* Pods_TicTacToe.framework */; };
 		A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */; };
-		A1E72F8D284CD7AF00869321 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8C284CD7AF00869321 /* ContentView.swift */; };
+		A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8C284CD7AF00869321 /* MainView.swift */; };
 		A1E72F8F284CD7B100869321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72F8E284CD7B100869321 /* Assets.xcassets */; };
-		A1E72F92284CD7B100869321 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72F91284CD7B100869321 /* Preview Assets.xcassets */; };
+		A1E72F92284CD7B100869321 /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72F91284CD7B100869321 /* PreviewAssets.xcassets */; };
 		A1E72F9C284CD7B100869321 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F9B284CD7B100869321 /* TicTacToeTests.swift */; };
+		A1E72FBC284CE37100869321 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72FBB284CE37100869321 /* Colors.xcassets */; };
+		A1E72FBE284CE38900869321 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72FBD284CE38900869321 /* Images.xcassets */; };
+		A1E72FC3284CE3D600869321 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1E72FC5284CE3D600869321 /* Localizable.strings */; };
+		A1E72FCB284CE49C00869321 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72FC7284CE49C00869321 /* Fonts.swift */; };
+		A1E72FCC284CE49C00869321 /* PreviewAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72FC8284CE49C00869321 /* PreviewAssets.swift */; };
+		A1E72FCD284CE49C00869321 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72FC9284CE49C00869321 /* Assets.swift */; };
+		A1E72FCE284CE49C00869321 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72FCA284CE49C00869321 /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,13 +33,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BF54AB2EE3F71595D69E96E /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
 		A1E72F87284CD7AF00869321 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
-		A1E72F8C284CD7AF00869321 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A1E72F8C284CD7AF00869321 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A1E72F8E284CD7B100869321 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A1E72F91284CD7B100869321 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A1E72F91284CD7B100869321 /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
 		A1E72F97284CD7B100869321 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E72F9B284CD7B100869321 /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
+		A1E72FBB284CE37100869321 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A1E72FBD284CE38900869321 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1E72FC4284CE3D600869321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A1E72FC7284CE49C00869321 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A1E72FC8284CE49C00869321 /* PreviewAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewAssets.swift; sourceTree = "<group>"; };
+		A1E72FC9284CE49C00869321 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A1E72FCA284CE49C00869321 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		B45DC3036C5F19ADE0F6CDC8 /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
+		E5C803BAC104357CC0247614 /* Pods_TicTacToe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F163590D12BB1FEF3A75421 /* Pods_TicTacToe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,12 +71,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72D56471ED14E4D8F71B19AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5C803BAC104357CC0247614 /* Pods_TicTacToe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9909D5D0B4C293A11134D1E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF54AB2EE3F71595D69E96E /* Pods-TicTacToe.debug.xcconfig */,
+				B45DC3036C5F19ADE0F6CDC8 /* Pods-TicTacToe.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A1E72F7E284CD7AF00869321 = {
 			isa = PBXGroup;
 			children = (
 				A1E72F89284CD7AF00869321 /* TicTacToe */,
 				A1E72F9A284CD7B100869321 /* TicTacToeTests */,
 				A1E72F88284CD7AF00869321 /* Products */,
+				9909D5D0B4C293A11134D1E0 /* Pods */,
+				72D56471ED14E4D8F71B19AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,20 +111,20 @@
 		A1E72F89284CD7AF00869321 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */,
-				A1E72F8C284CD7AF00869321 /* ContentView.swift */,
-				A1E72F8E284CD7B100869321 /* Assets.xcassets */,
-				A1E72F90284CD7B100869321 /* Preview Content */,
+				A1E72FB7284CE26200869321 /* App */,
+				A1E72FB9284CE26D00869321 /* Common */,
+				A1E72FB8284CE26600869321 /* Flow */,
+				A1E72FB6284CE25B00869321 /* Resources */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
 		};
-		A1E72F90284CD7B100869321 /* Preview Content */ = {
+		A1E72F90284CD7B100869321 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
-				A1E72F91284CD7B100869321 /* Preview Assets.xcassets */,
+				A1E72F91284CD7B100869321 /* PreviewAssets.xcassets */,
 			);
-			path = "Preview Content";
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 		A1E72F9A284CD7B100869321 /* TicTacToeTests */ = {
@@ -97,6 +135,77 @@
 			path = TicTacToeTests;
 			sourceTree = "<group>";
 		};
+		A1E72FB6284CE25B00869321 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72FC6284CE3F600869321 /* Fonts */,
+				A1E72FC0284CE3C200869321 /* Localization */,
+				A1E72F90284CD7B100869321 /* PreviewContent */,
+				A1E72FBF284CE39400869321 /* Swiftgen */,
+				A1E72FBA284CE2F600869321 /* XCAssets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1E72FB7284CE26200869321 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1E72FB8284CE26600869321 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72F8C284CD7AF00869321 /* MainView.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		A1E72FB9284CE26D00869321 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A1E72FBA284CE2F600869321 /* XCAssets */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72F8E284CD7B100869321 /* Assets.xcassets */,
+				A1E72FBB284CE37100869321 /* Colors.xcassets */,
+				A1E72FBD284CE38900869321 /* Images.xcassets */,
+			);
+			path = XCAssets;
+			sourceTree = "<group>";
+		};
+		A1E72FBF284CE39400869321 /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72FC9284CE49C00869321 /* Assets.swift */,
+				A1E72FC7284CE49C00869321 /* Fonts.swift */,
+				A1E72FC8284CE49C00869321 /* PreviewAssets.swift */,
+				A1E72FCA284CE49C00869321 /* Strings.swift */,
+			);
+			path = Swiftgen;
+			sourceTree = "<group>";
+		};
+		A1E72FC0284CE3C200869321 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				A1E72FC5284CE3D600869321 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		A1E72FC6284CE3F600869321 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,7 +213,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1E72FAB284CD7B100869321 /* Build configuration list for PBXNativeTarget "TicTacToe" */;
 			buildPhases = (
+				F562A8C9C9FF5D3612F6E26B /* [CP] Check Pods Manifest.lock */,
 				A1E72F83284CD7AF00869321 /* Sources */,
+				A1E72FB5284CE0CC00869321 /* Swiftgen */,
+				A1E72FB4284CE0C000869321 /* Swiftlint */,
 				A1E72F84284CD7AF00869321 /* Frameworks */,
 				A1E72F85284CD7AF00869321 /* Resources */,
 			);
@@ -178,7 +290,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E72F92284CD7B100869321 /* Preview Assets.xcassets in Resources */,
+				A1E72FC3284CE3D600869321 /* Localizable.strings in Resources */,
+				A1E72FBC284CE37100869321 /* Colors.xcassets in Resources */,
+				A1E72FBE284CE38900869321 /* Images.xcassets in Resources */,
+				A1E72F92284CD7B100869321 /* PreviewAssets.xcassets in Resources */,
 				A1E72F8F284CD7B100869321 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,13 +307,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A1E72FB4284CE0C000869321 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"${CONFIGURATION}\" =~ \"Debug\" ]]; then\n  if [ \"${PODS_ROOT+x}\" ] && [ -x \"${PODS_ROOT}/SwiftLint/swiftlint\" ]; then\n    ${PODS_ROOT}/SwiftLint/swiftlint --config swiftlint.yml --quiet\n  elif which swiftlint >/dev/null; then\n    swiftlint --config swiftlint.yml --quiet\n  else\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n  fi\nfi\n";
+		};
+		A1E72FB5284CE0CC00869321 /* Swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"${CONFIGURATION}\" =~ \"Debug\" ]]; then\n  if [ \"${PODS_ROOT+x}\" ] && [ -x \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]; then\n      ${PODS_ROOT}/SwiftGen/bin/swiftgen\n  elif which swiftgen >/dev/null; then\n      swiftgen\n  else\n      echo \"warning: SwiftGen not installed, download from https://github.com/SwiftGen/SwiftGen\"\n  fi\nfi\n";
+		};
+		F562A8C9C9FF5D3612F6E26B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TicTacToe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1E72F83284CD7AF00869321 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E72F8D284CD7AF00869321 /* ContentView.swift in Sources */,
+				A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */,
+				A1E72FCB284CE49C00869321 /* Fonts.swift in Sources */,
 				A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */,
+				A1E72FCD284CE49C00869321 /* Assets.swift in Sources */,
+				A1E72FCE284CE49C00869321 /* Strings.swift in Sources */,
+				A1E72FCC284CE49C00869321 /* PreviewAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +399,17 @@
 			targetProxy = A1E72F98284CD7B100869321 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A1E72FC5284CE3D600869321 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1E72FC4284CE3D600869321 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A1E72FA9284CD7B100869321 /* Debug */ = {
@@ -271,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -337,12 +528,13 @@
 		};
 		A1E72FAC284CD7B100869321 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF54AB2EE3F71595D69E96E /* Pods-TicTacToe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Resources/PreviewContent\"";
 				DEVELOPMENT_TEAM = S2X33KL27N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -351,6 +543,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,12 +559,13 @@
 		};
 		A1E72FAD284CD7B100869321 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45DC3036C5F19ADE0F6CDC8 /* Pods-TicTacToe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TicTacToe/Resources/PreviewContent\"";
 				DEVELOPMENT_TEAM = S2X33KL27N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -380,6 +574,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

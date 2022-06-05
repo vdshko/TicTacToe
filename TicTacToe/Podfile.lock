@@ -1,0 +1,20 @@
+PODS:
+  - SwiftGen (6.5.1)
+  - SwiftLint (0.47.1)
+
+DEPENDENCIES:
+  - SwiftGen (= 6.5.1)
+  - SwiftLint (= 0.47.1)
+
+SPEC REPOS:
+  trunk:
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  SwiftGen: a6d22010845f08fe18fbdf3a07a8e380fd22e0ea
+  SwiftLint: f80f1be7fa96d30e0aa68e58d45d4ea1ccaac519
+
+PODFILE CHECKSUM: 02dddcbd0b277315d4c485d5b5b7d944279ea87b
+
+COCOAPODS: 1.11.3

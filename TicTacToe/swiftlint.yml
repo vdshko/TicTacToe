@@ -1,0 +1,130 @@
+disabled_rules: # rule identifiers to exclude from running
+  - notification_center_detachment
+  - identifier_name
+  - unused_setter_value # complains about overriden setter value
+  - inclusive_language
+
+opt_in_rules: # some rules are only opt-in
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - contains_over_first_not_nil
+  - empty_count
+  - empty_string
+  - toggle_bool
+  - explicit_init
+  - first_where
+  - joined_default_parameter
+  - literal_expression_end_indentation
+  - unneeded_parentheses_in_closure_argument
+  - operator_usage_whitespace
+  - private_action
+  - private_outlet
+  
+included: # paths to include during linting. `--path` is ignored if present.
+  - ../TicTacToe
+  
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - vendor
+  - XCTemplates
+  - DerivedData
+  - TicTacToe/Resources/Swiftgen
+
+custom_rules:
+  print_usage:
+    included: ".*\\.swift"
+    name: "print() method usage"
+    regex: 'print\(.*\)'
+    message: "Print should not be used in final code version"
+
+  debug_print_usage:
+    included: "*\\.swift"
+    name: "debugPrint() method usage"
+    regex: 'debugPrint\(.*\)'
+    message: "DebugPrint should not be used in final code version"
+    
+  capturing_list_space:
+    included: ".*\\.swift"
+    name: "Space in capturing list"
+    regex: '\{\['
+    message: "Detected missing space"
+
+  class_empty_line:
+    included: '.*\.swift'
+    name: 'Empty line in class, extension, struct'
+    regex: '^[ \t\r]*((public|internal|fileprivate|private|final)[ \t\r]+)*(class|extension|struct|protocol)[ \t\r]+[A-Za-z0-9_:, \t\r]+[{][ \t\r]*\n[ \t\r]*[^\r\n\t\f\v ]'
+    message: 'Class, extension, struct should have one empty line at the beginning'
+  
+  empty_line_after_func:
+    included: '.*\.swift'
+    name: 'Empty line after func(){'
+    regex: '(^[ a-zA-Z@ ]*(?:func) [ a-zA-Z0-9:,<>\.\(\)\"-=\?\!`_\[\]]*\{\n( *)?\n)'
+    message: 'Detected empty line after func().'
+  
+  one_liner_return:
+    included: '.*\.swift'
+    name: 'Empty line before return'
+    regex: '([{]|[:])(\n\s*){2,}(return)'
+    message: 'Return statement for one liners should be compact in single line.'
+  
+  too_many_lines_before_return:
+    included: '.*\.swift'
+    name: 'Too many lines before return'
+    regex: '(\n\s*){3,}(return)'
+    message: 'Return statement should be preceded by single empty line.'
+  
+  internal_keyword:
+    included: '.*\.swift'
+    name: 'Redundant internal keyword'
+    regex: '((internal)[ \t\r]+)'
+    message: 'Internal modifier is used by default, adding it explicitely is redundant.'
+  
+  empty_line_before_closing_bracket:
+    included: '.*\.swift'
+    name: 'Empty line before closing bracket'
+    regex: '(^( *)?\n\s*\})'
+    message: 'Detected empty line before closing bracket.'
+  
+  empty_line_at_beginning_of_file:
+    included: '.*\.swift'
+    name: 'Empty line at beginning of file'
+    regex: '(^\A( *)?\n)'
+    message: 'Detected empty line at beginning of file.'
+  
+  opening_bracket_at_beginning_of_line:
+    included: '.*\.swift'
+    name: 'Opening bracket at beginning of line'
+    regex: '(^( *)?\{)'
+    message: 'Opening bracket should not be added in the new line.'
+
+#  comment_at_beginning_of_file:
+#    included: '.*\.swift'
+#    name: 'Comment at beginning of file'
+#    regex: '(^\A( *)?\/\/)'
+#    message: 'Detected header comment at beginning of file.'
+  
+comma: error
+force_cast: warning
+force_try: warning
+return_arrow_whitespace: error
+
+trailing_whitespace:
+  ignores_empty_lines: true
+line_length:
+  warning: 250
+  error: 350
+type_body_length:
+  warning: 300
+  error: 400
+cyclomatic_complexity:
+  ignores_case_statements: true
+file_length:
+  warning: 500
+  error: 1000
+function_body_length:
+  warning: 80
+  error: 100
+warning_threshold: 30
+reporter: "xcode"
