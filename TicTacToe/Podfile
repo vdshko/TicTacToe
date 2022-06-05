@@ -1,0 +1,20 @@
+platform :ios, '15.0'
+use_frameworks!
+
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+
+target 'TicTacToe' do
+  # swiftlint; https://github.com/realm/SwiftLint
+  pod 'SwiftLint', '0.47.1', :inhibit_warnings => true
+  
+  # swiftgen; https://github.com/SwiftGen/SwiftGen
+  pod 'SwiftGen', '6.5.1', :inhibit_warnings => true
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+    end
+  end
+end
