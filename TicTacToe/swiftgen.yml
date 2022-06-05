@@ -5,7 +5,7 @@ xcassets:
     - TicTacToe/Resources/XCAssets/Colors.xcassets
     - TicTacToe/Resources/XCAssets/Images.xcassets
     outputs:
-      templateName: swift5
+      templatePath: TicTacToe/Resources/Swiftgen/Stencils/xcassets-swiftui.stencil
       output: TicTacToe/Resources/Swiftgen/Assets.swift
       params:
         publicAccess: true
@@ -14,7 +14,7 @@ xcassets:
   - inputs:
     - TicTacToe/Resources/PreviewContent/PreviewAssets.xcassets
     outputs:
-      templateName: swift5
+      templatePath: TicTacToe/Resources/Swiftgen/Stencils/xcassets-swiftui.stencil
       output: TicTacToe/Resources/Swiftgen/PreviewAssets.swift
       params:
         publicAccess: true
