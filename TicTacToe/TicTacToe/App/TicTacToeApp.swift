@@ -12,7 +12,14 @@ struct TicTacToeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(viewModel: .init(diContainer: diContainer()))
         }
+    }
+    
+    private func diContainer() -> DIContainer {
+        let appState: AppState = AppState()
+        let services: DIContainer.Services = DIContainer.Services()
+        
+        return DIContainer(appState: appState, services: services)
     }
 }
