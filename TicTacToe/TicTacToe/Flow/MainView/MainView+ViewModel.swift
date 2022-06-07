@@ -11,13 +11,16 @@ extension MainView {
     
     final class MainViewModel: ObservableObject {
         
-        @Published var moves: [Move?] = Array(repeating: nil, count: 9)
+        @Published private(set) var moves: [Move?] = []
+        
         private var isEvenTurn: Bool = false
+        private var cancellable: Set<AnyCancellable> = Set()
         
         private let diContainer: DIContainer
         
         init(diContainer: DIContainer) {
             self.diContainer = diContainer
+            setupBinding()
         }
         
         func handleItemTap(for id: Int) {
@@ -30,8 +33,15 @@ extension MainView {
                 player: Move.Player.human,
                 gameFigure: isEvenTurn ? Move.GameFigure.circle : Move.GameFigure.xmark
             )
-            moves = diContainer.appState.gameBoard
             isEvenTurn.toggle()
+        }
+        
+        private func setupBinding() {
+            diContainer.appState.$gameBoard
+                .sink { [weak self] in
+                    self?.moves = $0
+                }
+                .store(in: &cancellable)
         }
     }
 }
