@@ -14,8 +14,8 @@ extension MainView {
         @Published private(set) var moves: [Move?] = []
         
         private var isEvenTurn: Bool = false
-        private var cancellable: Set<AnyCancellable> = Set()
         
+        private let cancelBag: CancelBag = CancelBag()
         private let diContainer: DIContainer
         
         init(diContainer: DIContainer) {
@@ -33,15 +33,18 @@ extension MainView {
                 player: Move.Player.human,
                 gameFigure: isEvenTurn ? Move.GameFigure.circle : Move.GameFigure.xmark
             )
-            isEvenTurn.toggle()
         }
         
         private func setupBinding() {
             diContainer.appState.$gameBoard
-                .sink { [weak self] in
-                    self?.moves = $0
+                .assignWeak(to: \.moves, on: self)
+                .store(in: cancelBag)
+            diContainer.appState.$gameBoard
+                .dropFirst()
+                .sink { [weak self] _ in
+                    self?.isEvenTurn.toggle()
                 }
-                .store(in: &cancellable)
+                .store(in: cancelBag)
         }
     }
 }
