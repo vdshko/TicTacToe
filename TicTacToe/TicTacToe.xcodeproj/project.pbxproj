@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3F163590D12BB1FEF3A75421 /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C803BAC104357CC0247614 /* Pods_TicTacToe.framework */; };
 		A110ED21284D688800BEA0BC /* xcassets-swiftui.stencil in Resources */ = {isa = PBXBuildFile; fileRef = A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */; };
+		A1CB07CC284FDDF800A1BD02 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07CB284FDDF800A1BD02 /* Move.swift */; };
+		A1CB07D0284FEFCE00A1BD02 /* Publisher+AssignWeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07CF284FEFCE00A1BD02 /* Publisher+AssignWeak.swift */; };
+		A1CB07D2284FF00000A1BD02 /* AnyCancellable+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07D1284FF00000A1BD02 /* AnyCancellable+CancelBag.swift */; };
+		A1CB07D4284FF01600A1BD02 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07D3284FF01600A1BD02 /* CancelBag.swift */; };
 		A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */; };
 		A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E72F8C284CD7AF00869321 /* MainView.swift */; };
 		A1E72F8F284CD7B100869321 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E72F8E284CD7B100869321 /* Assets.xcassets */; };
@@ -39,6 +43,10 @@
 /* Begin PBXFileReference section */
 		7BF54AB2EE3F71595D69E96E /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
 		A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "xcassets-swiftui.stencil"; sourceTree = "<group>"; };
+		A1CB07CB284FDDF800A1BD02 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		A1CB07CF284FEFCE00A1BD02 /* Publisher+AssignWeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AssignWeak.swift"; sourceTree = "<group>"; };
+		A1CB07D1284FF00000A1BD02 /* AnyCancellable+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyCancellable+CancelBag.swift"; sourceTree = "<group>"; };
+		A1CB07D3284FF01600A1BD02 /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
 		A1E72F87284CD7AF00869321 /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E72F8A284CD7AF00869321 /* TicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeApp.swift; sourceTree = "<group>"; };
 		A1E72F8C284CD7AF00869321 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -102,6 +110,23 @@
 				A110ED20284D688800BEA0BC /* xcassets-swiftui.stencil */,
 			);
 			path = Stencils;
+			sourceTree = "<group>";
+		};
+		A1CB07CD284FDE0100A1BD02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB07CB284FDDF800A1BD02 /* Move.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1CB07CE284FEF8200A1BD02 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1CB07D1284FF00000A1BD02 /* AnyCancellable+CancelBag.swift */,
+				A1CB07CF284FEFCE00A1BD02 /* Publisher+AssignWeak.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A1E72F7E284CD7AF00869321 = {
@@ -183,7 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				A1FEB783284D18140076BA64 /* AppState.swift */,
+				A1CB07D3284FF01600A1BD02 /* CancelBag.swift */,
 				A1FEB785284D18480076BA64 /* DIContainer.swift */,
+				A1CB07CE284FEF8200A1BD02 /* Extensions */,
+				A1CB07CD284FDE0100A1BD02 /* Models */,
 				A1FEB787284D19050076BA64 /* Services */,
 			);
 			path = Common;
@@ -410,10 +438,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CB07CC284FDDF800A1BD02 /* Move.swift in Sources */,
 				A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */,
+				A1CB07D2284FF00000A1BD02 /* AnyCancellable+CancelBag.swift in Sources */,
 				A1E72FCB284CE49C00869321 /* Fonts.swift in Sources */,
 				A1FEB784284D18140076BA64 /* AppState.swift in Sources */,
+				A1CB07D0284FEFCE00A1BD02 /* Publisher+AssignWeak.swift in Sources */,
 				A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */,
+				A1CB07D4284FF01600A1BD02 /* CancelBag.swift in Sources */,
 				A1FEB786284D18480076BA64 /* DIContainer.swift in Sources */,
 				A1E72FCD284CE49C00869321 /* Assets.swift in Sources */,
 				A1E72FCE284CE49C00869321 /* Strings.swift in Sources */,
