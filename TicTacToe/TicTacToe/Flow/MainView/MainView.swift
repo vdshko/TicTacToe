@@ -21,7 +21,6 @@ private extension MainView {
     enum Constants {
         
         static let columnsCount: Int = 3
-        static let itemsCount: Int = columnsCount * columnsCount
         static let interItemSpacing: CGFloat = 15.0
     }
     
@@ -64,7 +63,7 @@ private extension MainView {
         let itemSide: CGFloat = (minSpace - Constants.interItemSpacing * CGFloat(Constants.columnsCount - 1)) / CGFloat(Constants.columnsCount)
         let gridColumns: [GridItem] = Array(repeating: .init(.flexible()), count: Constants.columnsCount)
         LazyVGrid(columns: gridColumns, spacing: Constants.interItemSpacing) {
-            ForEach(0 ..< Constants.itemsCount, id: \.self) { index in
+            ForEach(0 ..< viewModel.moves.count, id: \.self) { index in
                 item(id: index, side: itemSide)
             }
         }
@@ -76,14 +75,15 @@ private extension MainView {
             Circle()
                 .frame(width: side, height: side)
                 .foregroundColor(Asset.Colors.boardItem.color)
-            Image(systemName: id % 2 == 0 ? "xmark" : "circle" )
-                .resizable()
-                .scaledToFit()
-                .padding(side * 0.25)
-                .foregroundColor(.white)
+            if let move = viewModel.moves[id] {
+                move.gameFigure.image
+                    .resizable()
+                    .frame(width: side * 0.5, height: side * 0.5)
+                    .foregroundColor(.white)
+            }
         }
         .onTapGesture {
-            print("tap on id: \(id)")
+            viewModel.handleItemTap(for: id)
         }
     }
 }
