@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  BoardView.swift
 //  TicTacToe
 //
 //  Created by Vlad Shkodich on 05.06.2022.
@@ -7,24 +7,13 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct BoardView: View {
     
-    @StateObject var viewModel: MainViewModel
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     
-    var body: some View { bodyView() }
-}
-
-// MARK: - Views
-
-private extension MainView {
+    @StateObject var viewModel: BoardViewModel
     
-    enum Constants {
-        
-        static let columnsCount: Int = 3
-        static let interItemSpacing: CGFloat = 15.0
-    }
-    
-    @ViewBuilder func bodyView() -> some View {
+    var body: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
@@ -41,7 +30,8 @@ private extension MainView {
         }
     }
     
-    @ViewBuilder func centeredGameBoardView(for geometry: GeometryProxy) -> some View {
+    @ViewBuilder
+    private func centeredGameBoardView(for geometry: GeometryProxy) -> some View {
         let isLandscape: Bool = geometry.size.height < geometry.size.width
         if isLandscape {
             HStack {
@@ -58,7 +48,8 @@ private extension MainView {
         }
     }
     
-    @ViewBuilder func gameBoardView(for geometry: GeometryProxy) -> some View {
+    @ViewBuilder
+    private func gameBoardView(for geometry: GeometryProxy) -> some View {
         let minSpace: CGFloat = min(geometry.size.width, geometry.size.height)
         let itemSide: CGFloat = (minSpace - Constants.interItemSpacing * CGFloat(Constants.columnsCount - 1)) / CGFloat(Constants.columnsCount)
         let gridColumns: [GridItem] = Array(repeating: .init(.flexible()), count: Constants.columnsCount)
@@ -88,14 +79,25 @@ private extension MainView {
     }
 }
 
+// MARK: - Internals
+
+private extension BoardView {
+    
+    enum Constants {
+        
+        static let columnsCount: Int = 3
+        static let interItemSpacing: CGFloat = 15.0
+    }
+}
+
 #if DEBUG
-struct MainView_Previews: PreviewProvider {
+struct BoardView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            MainView(viewModel: .init(diContainer: .preview))
+            BoardView(viewModel: .init(diContainer: .preview))
                 .previewInterfaceOrientation(.portrait)
-            MainView(viewModel: .init(diContainer: .preview))
+            BoardView(viewModel: .init(diContainer: .preview))
                 .previewInterfaceOrientation(.landscapeLeft)
         }
     }

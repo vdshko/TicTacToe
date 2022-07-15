@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct TicTacToeApp: App {
     
+    @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+    
     var body: some Scene {
         WindowGroup {
-            MainView(viewModel: .init(diContainer: diContainer()))
+            BoardView(viewModel: .init(diContainer: diContainer()))
         }
     }
     

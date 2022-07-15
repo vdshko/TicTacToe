@@ -1,5 +1,5 @@
 //
-//  MainView+ViewModel.swift
+//  BoardView+ViewModel.swift
 //  TicTacToe
 //
 //  Created by Vlad Shkodich on 05.06.2022.
@@ -7,9 +7,9 @@
 
 import Combine
 
-extension MainView {
+extension BoardView {
     
-    final class MainViewModel: ObservableObject {
+    final class BoardViewModel: ObservableObject {
         
         @Published private(set) var moves: [Move?] = []
         
