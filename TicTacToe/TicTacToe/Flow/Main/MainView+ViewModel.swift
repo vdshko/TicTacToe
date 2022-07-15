@@ -1,5 +1,5 @@
 //
-//  BoardView+ViewModel.swift
+//  MainView+ViewModel.swift
 //  TicTacToe
 //
 //  Created by Vlad Shkodich on 05.06.2022.
@@ -7,9 +7,9 @@
 
 import Combine
 
-extension BoardView {
+extension MainView {
     
-    final class BoardViewModel: ObservableObject {
+    final class MainViewModel: ObservableObject {
         
         @Published private(set) var moves: [Move?] = []
         
@@ -22,6 +22,8 @@ extension BoardView {
             self.diContainer = diContainer
             setupBinding()
         }
+        
+        func openProfile() {}
         
         func handleItemTap(for id: Int) {
             guard diContainer.appState.gameBoard[id] == nil else {

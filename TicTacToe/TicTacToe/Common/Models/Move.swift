@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Move {
+struct Move: Hashable {
     
     let boardIndex: Int
     let player: Player

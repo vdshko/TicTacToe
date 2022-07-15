@@ -14,7 +14,7 @@ struct TicTacToeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            BoardView(viewModel: .init(diContainer: diContainer()))
+            MainView(viewModel: .init(diContainer: diContainer()))
         }
     }
     

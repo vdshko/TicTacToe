@@ -12,9 +12,18 @@ import UIKit
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Asset {
   public enum Colors {
-    public static let boardItem = ColorAsset(name: "boardItem")
+    public enum Specific {
+      public static let boardItem = ColorAsset(name: "Specific/boardItem")
+    }
+    public enum Standard {
+      public static let black = ColorAsset(name: "Standard/black")
+      public static let red = ColorAsset(name: "Standard/red")
+      public static let transparent = ColorAsset(name: "Standard/transparent")
+      public static let white = ColorAsset(name: "Standard/white")
+    }
   }
   public enum Images {
+    public static let profile = ImageAsset(name: "profile")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
