@@ -39,6 +39,21 @@ public enum L10n {
     /// Player 2
     public static let second = L10n.tr("Localizable", "player.second")
   }
+
+  public enum Profile {
+    public enum GameType {
+      /// Multiplayer
+      public static let multiPlayer = L10n.tr("Localizable", "profile.gameType.multiPlayer")
+      /// Single player 
+      public static let singlePlayer = L10n.tr("Localizable", "profile.gameType.singlePlayer")
+    }
+    public enum List {
+      /// Game type
+      public static let gameType = L10n.tr("Localizable", "profile.list.gameType")
+      /// Restart game
+      public static let restart = L10n.tr("Localizable", "profile.list.restart")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

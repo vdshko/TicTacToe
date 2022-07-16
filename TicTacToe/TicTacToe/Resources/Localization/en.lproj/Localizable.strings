@@ -13,3 +13,10 @@
 "player.first" = "Player 1";
 "player.second" = "Player 2";
 "player.computer" = "Computer";
+
+// MARK: - Profile
+
+"profile.list.gameType" = "Game type";
+"profile.list.restart" = "Restart game";
+"profile.gameType.singlePlayer" = "Single player ";
+"profile.gameType.multiPlayer" = "Multiplayer";

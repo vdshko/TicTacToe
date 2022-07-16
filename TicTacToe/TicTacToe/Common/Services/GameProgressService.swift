@@ -29,7 +29,7 @@ final class GameProgressServiceImpl: GameProgressService {
             return .player1
         }
         
-        switch appState.profile.gameType {
+        switch appState.gameType {
         case .singlePlayer: return .computer
         case .multiPlayer: return .player2
         }
@@ -117,7 +117,7 @@ private extension GameProgressServiceImpl {
         }
         
         if isEvenMove,
-           case GameType.singlePlayer = appState.profile.gameType {
+           case GameType.singlePlayer = appState.gameType {
             fireAIMove()
         }
     }

@@ -33,6 +33,9 @@ struct MainView: View {
                 viewModel.handleAlertTap()
             }
         }
+        .sheet(isPresented: $viewModel.isProfileShown) {
+            ProfileView(viewModel: viewModel.profileViewModel())
+        }
         .padding(.horizontal, Constants.interItemSpacing)
         .unlockRotation()
         .preferredColorScheme(.dark)
@@ -44,7 +47,7 @@ struct MainView: View {
             HStack {
                 Spacer()
                 Button {
-                    viewModel.openProfile()
+                    viewModel.handleProfileTap()
                 } label: {
                     Asset.Images.profile.image
                         .resizable()
@@ -127,7 +130,6 @@ private extension MainView {
     }
 }
 
-#if DEBUG
 struct MainView_Previews: PreviewProvider {
     
     static var previews: some View {
@@ -139,4 +141,3 @@ struct MainView_Previews: PreviewProvider {
         }
     }
 }
-#endif

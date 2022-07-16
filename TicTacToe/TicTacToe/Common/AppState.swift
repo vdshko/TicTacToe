@@ -10,5 +10,7 @@ import Combine
 final class AppState: ObservableObject {
     
     @Published var gameBoard: [Move?] = Array(repeating: nil, count: 9)
-    var profile: Profile = Profile(gameType: .singlePlayer)
+    @Published var isProfileShown: Bool = false
+    
+    var gameType: GameType = GameType.singlePlayer
 }
