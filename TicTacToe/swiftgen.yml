@@ -1,0 +1,41 @@
+xcassets:
+
+  # Assets
+  - inputs:
+    - TicTacToe/Resources/XCAssets/Colors.xcassets
+    - TicTacToe/Resources/XCAssets/Images.xcassets
+    outputs:
+      templatePath: TicTacToe/Resources/Swiftgen/Stencils/xcassets-swiftui.stencil
+      output: TicTacToe/Resources/Swiftgen/Assets.swift
+      params:
+        publicAccess: true
+
+  # Preview Assets
+  - inputs:
+    - TicTacToe/Resources/PreviewContent/PreviewAssets.xcassets
+    outputs:
+      templatePath: TicTacToe/Resources/Swiftgen/Stencils/xcassets-swiftui.stencil
+      output: TicTacToe/Resources/Swiftgen/PreviewAssets.swift
+      params:
+        publicAccess: true
+        enumName: PreviewAsset
+        imageTypeName: PreviewColorAsset
+        colorTypeName: PreviewImageAsset
+
+fonts:
+  - inputs:
+    - TicTacToe/Resources/Fonts
+    outputs:
+      output: TicTacToe/Resources/Swiftgen/Fonts.swift
+      templateName: swift5
+      params:
+        publicAccess: true
+
+strings:
+  - inputs:
+    - TicTacToe/Resources/Localization/en.lproj/Localizable.strings
+    outputs:
+      output: TicTacToe/Resources/Swiftgen/Strings.swift
+      templateName: structured-swift5
+      params:
+        publicAccess: true
