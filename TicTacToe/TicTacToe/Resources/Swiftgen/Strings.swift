@@ -11,6 +11,21 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
 
+  public enum Alert {
+    public enum Button {
+      /// Restart game
+      public static let restart = L10n.tr("Localizable", "alert.button.restart")
+    }
+    public enum Title {
+      /// The game end with draw!
+      public static let draw = L10n.tr("Localizable", "alert.title.draw")
+      /// %@ - win the game!
+      public static func win(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "alert.title.win", String(describing: p1))
+      }
+    }
+  }
+
   public enum App {
     /// Tic Tac Toe
     public static let title = L10n.tr("Localizable", "app.title")

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import TicTacToe
+@testable import Tic_Tac_Toe
 
 class TicTacToeTests: XCTestCase {
 

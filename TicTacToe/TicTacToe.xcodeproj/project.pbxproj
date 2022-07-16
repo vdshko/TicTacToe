@@ -716,7 +716,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe.app/TicTacToe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tic Tac Toe.app/Tic Tac Toe";
 			};
 			name = Debug;
 		};
@@ -736,7 +736,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe.app/TicTacToe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tic Tac Toe.app/Tic Tac Toe";
 			};
 			name = Release;
 		};

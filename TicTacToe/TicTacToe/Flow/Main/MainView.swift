@@ -28,6 +28,11 @@ struct MainView: View {
                 portraitGameBoardView()
             }
         }
+        .alert(viewModel.alertTitle, isPresented: $viewModel.isAlertPresented) {
+            Button(L10n.Alert.Button.restart) {
+                viewModel.handleAlertTap()
+            }
+        }
         .padding(.horizontal, Constants.interItemSpacing)
         .unlockRotation()
         .preferredColorScheme(.dark)
@@ -107,6 +112,7 @@ struct MainView: View {
             }
         }
         .frame(width: minSpace, height: minSpace)
+        .disabled(viewModel.isGameBoardDisabled)
     }
 }
 
