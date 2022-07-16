@@ -12,8 +12,7 @@ extension MainView {
     final class MainViewModel: ObservableObject {
         
         @Published private(set) var moves: [Move?] = []
-        
-        private var isEvenTurn: Bool = false
+        @Published private(set) var isBoardLocked: Bool = false
         
         private let cancelBag: CancelBag = CancelBag()
         private let diContainer: DIContainer
@@ -25,27 +24,18 @@ extension MainView {
         
         func openProfile() {}
         
-        func handleItemTap(for id: Int) {
-            guard diContainer.appState.gameBoard[id] == nil else {
+        func handleItemTap(for index: Int) {
+            guard !isBoardLocked else {
                 return
             }
             
-            diContainer.appState.gameBoard[id] = Move(
-                boardIndex: id,
-                player: Move.Player.human,
-                gameFigure: isEvenTurn ? Move.GameFigure.circle : Move.GameFigure.xmark
-            )
+            diContainer.services.gameProgressService.makeMove(at: index)
         }
         
         private func setupBinding() {
             diContainer.appState.$gameBoard
+                .receive(on: DispatchQueue.main)
                 .assignWeak(to: \.moves, on: self)
-                .store(in: cancelBag)
-            diContainer.appState.$gameBoard
-                .dropFirst()
-                .sink { [weak self] _ in
-                    self?.isEvenTurn.toggle()
-                }
                 .store(in: cancelBag)
         }
     }

@@ -12,6 +12,9 @@
 		A12E42C42881D2B0005773BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E42C32881D2B0005773BF /* AppDelegate.swift */; };
 		A12E42C92881D96C005773BF /* BoardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E42C82881D96C005773BF /* BoardItemView.swift */; };
 		A12E42CC2881EA3A005773BF /* DebugFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12E42CB2881EA3A005773BF /* DebugFrame.swift */; };
+		A1B21E7E2882151A006113BA /* GameProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B21E7D2882151A006113BA /* GameProgressService.swift */; };
+		A1B21E8028821C32006113BA /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B21E7F28821C32006113BA /* Profile.swift */; };
+		A1B21E8228821EDA006113BA /* AIEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B21E8128821EDA006113BA /* AIEngine.swift */; };
 		A1CB07CC284FDDF800A1BD02 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07CB284FDDF800A1BD02 /* Move.swift */; };
 		A1CB07D0284FEFCE00A1BD02 /* Publisher+AssignWeak.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07CF284FEFCE00A1BD02 /* Publisher+AssignWeak.swift */; };
 		A1CB07D2284FF00000A1BD02 /* AnyCancellable+CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CB07D1284FF00000A1BD02 /* AnyCancellable+CancelBag.swift */; };
@@ -49,6 +52,9 @@
 		A12E42C32881D2B0005773BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A12E42C82881D96C005773BF /* BoardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardItemView.swift; sourceTree = "<group>"; };
 		A12E42CB2881EA3A005773BF /* DebugFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugFrame.swift; sourceTree = "<group>"; };
+		A1B21E7D2882151A006113BA /* GameProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgressService.swift; sourceTree = "<group>"; };
+		A1B21E7F28821C32006113BA /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A1B21E8128821EDA006113BA /* AIEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIEngine.swift; sourceTree = "<group>"; };
 		A1CB07CB284FDDF800A1BD02 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		A1CB07CF284FEFCE00A1BD02 /* Publisher+AssignWeak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AssignWeak.swift"; sourceTree = "<group>"; };
 		A1CB07D1284FF00000A1BD02 /* AnyCancellable+CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyCancellable+CancelBag.swift"; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CB07CB284FDDF800A1BD02 /* Move.swift */,
+				A1B21E7F28821C32006113BA /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,6 +288,8 @@
 		A1FEB787284D19050076BA64 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A1B21E8128821EDA006113BA /* AIEngine.swift */,
+				A1B21E7D2882151A006113BA /* GameProgressService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -468,10 +477,13 @@
 				A1E72F8D284CD7AF00869321 /* MainView.swift in Sources */,
 				A1CB07D2284FF00000A1BD02 /* AnyCancellable+CancelBag.swift in Sources */,
 				A1E72FCB284CE49C00869321 /* Fonts.swift in Sources */,
+				A1B21E8228821EDA006113BA /* AIEngine.swift in Sources */,
 				A12E42C42881D2B0005773BF /* AppDelegate.swift in Sources */,
 				A1FEB784284D18140076BA64 /* AppState.swift in Sources */,
+				A1B21E8028821C32006113BA /* Profile.swift in Sources */,
 				A1CB07D0284FEFCE00A1BD02 /* Publisher+AssignWeak.swift in Sources */,
 				A1E72F8B284CD7AF00869321 /* TicTacToeApp.swift in Sources */,
+				A1B21E7E2882151A006113BA /* GameProgressService.swift in Sources */,
 				A1CB07D4284FF01600A1BD02 /* CancelBag.swift in Sources */,
 				A1FEB786284D18480076BA64 /* DIContainer.swift in Sources */,
 				A1E72FCD284CE49C00869321 /* Assets.swift in Sources */,

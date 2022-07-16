@@ -18,7 +18,14 @@ final class DIContainer {
 
 extension DIContainer {
     
-    final class Services {}
+    final class Services {
+        
+        let gameProgressService: GameProgressService
+        
+        init(gameProgressService: GameProgressService) {
+            self.gameProgressService = gameProgressService
+        }
+    }
 }
 
 #if DEBUG
@@ -26,7 +33,12 @@ extension DIContainer {
     
     static var preview: DIContainer {
         let appState: AppState = AppState()
-        let services: Services = Services()
+        let services: Services = Services(
+            gameProgressService: GameProgressServiceImpl(
+                appState: appState,
+                aiEngine: AIEngineImpl()
+            )
+        )
         
         return DIContainer(appState: appState, services: services)
     }

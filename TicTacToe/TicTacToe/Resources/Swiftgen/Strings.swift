@@ -15,6 +15,15 @@ public enum L10n {
     /// Tic Tac Toe
     public static let title = L10n.tr("Localizable", "app.title")
   }
+
+  public enum Player {
+    /// Computer
+    public static let computer = L10n.tr("Localizable", "player.computer")
+    /// Player 1
+    public static let first = L10n.tr("Localizable", "player.first")
+    /// Player 2
+    public static let second = L10n.tr("Localizable", "player.second")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

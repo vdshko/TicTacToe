@@ -30,8 +30,8 @@ struct BoardItemView_Previews: PreviewProvider {
     
     private static let moves: [Move?] = [
         nil,
-        Move(boardIndex: 0, player: .human, gameFigure: .xmark),
-        Move(boardIndex: 1, player: .human, gameFigure: .circle)
+        Move(boardIndex: 0, player: .player1, gameFigure: .xmark),
+        Move(boardIndex: 1, player: .player1, gameFigure: .circle)
     ]
     
     static var previews: some View {

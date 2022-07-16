@@ -20,7 +20,12 @@ struct TicTacToeApp: App {
     
     private func diContainer() -> DIContainer {
         let appState: AppState = AppState()
-        let services: DIContainer.Services = DIContainer.Services()
+        let services: DIContainer.Services = DIContainer.Services(
+            gameProgressService: GameProgressServiceImpl(
+                appState: appState,
+                aiEngine: AIEngineImpl()
+            )
+        )
         
         return DIContainer(appState: appState, services: services)
     }

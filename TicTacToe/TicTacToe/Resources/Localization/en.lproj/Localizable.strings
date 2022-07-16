@@ -1,1 +1,9 @@
+// MARK: - App
+
 "app.title" = "Tic Tac Toe";
+
+// MARK: - Player
+
+"player.first" = "Player 1";
+"player.second" = "Player 2";
+"player.computer" = "Computer";

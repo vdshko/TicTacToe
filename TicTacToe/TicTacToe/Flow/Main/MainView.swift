@@ -22,7 +22,11 @@ struct MainView: View {
     var body: some View {
         VStack(spacing: Constants.interItemSpacing) {
             topBarView()
-            orientedGameBoardView()
+            if isLandscape {
+                landscapeGameBoardView()
+            } else {
+                portraitGameBoardView()
+            }
         }
         .padding(.horizontal, Constants.interItemSpacing)
         .unlockRotation()
@@ -40,8 +44,9 @@ struct MainView: View {
                     Asset.Images.profile.image
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40.0, height: 40.0)
+                        .frame(width: 24.0, height: 24.0)
                         .foregroundColor(Asset.Colors.Standard.white.color)
+                        .padding(8.0)
                 }
             }
             Text(L10n.App.title)
@@ -52,19 +57,36 @@ struct MainView: View {
     }
     
     @ViewBuilder
-    private func orientedGameBoardView() -> some View {
+    private func landscapeGameBoardView() -> some View {
         GeometryReader { geometry in
-            if isLandscape {
+            ZStack(alignment: .leading) {
                 HStack {
                     Spacer()
                     gameBoardView(for: geometry)
                     Spacer()
                 }
-            } else {
+                if viewModel.isBoardLocked {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding()
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    private func portraitGameBoardView() -> some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .top) {
                 VStack {
                     Spacer()
                     gameBoardView(for: geometry)
                     Spacer()
+                }
+                if viewModel.isBoardLocked {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding()
                 }
             }
         }
@@ -105,9 +127,9 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             MainView(viewModel: .init(diContainer: .preview))
-                .previewInterfaceOrientation(.portrait)
-            MainView(viewModel: .init(diContainer: .preview))
                 .previewInterfaceOrientation(.landscapeLeft)
+            MainView(viewModel: .init(diContainer: .preview))
+                .previewInterfaceOrientation(.portrait)
         }
     }
 }

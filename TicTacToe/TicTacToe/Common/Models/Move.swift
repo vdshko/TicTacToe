@@ -18,7 +18,16 @@ extension Move {
     
     enum Player {
         
-        case human
+        case player1, player2
+        case computer
+        
+        var rawValue: String {
+            switch self {
+            case .player1: return L10n.Player.first
+            case .player2: return L10n.Player.second
+            case .computer: return L10n.Player.computer
+            }
+        }
     }
     
     enum GameFigure: String {
