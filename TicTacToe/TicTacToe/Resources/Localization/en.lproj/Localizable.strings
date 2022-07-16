@@ -1,1 +1,15 @@
+// MARK: - App
+
 "app.title" = "Tic Tac Toe";
+
+// MARK: - Alert
+
+"alert.button.restart" = "Restart game";
+"alert.title.win" = "%@ - win the game!";
+"alert.title.draw" = "The game end with draw!";
+
+// MARK: - Player
+
+"player.first" = "Player 1";
+"player.second" = "Player 2";
+"player.computer" = "Computer";
