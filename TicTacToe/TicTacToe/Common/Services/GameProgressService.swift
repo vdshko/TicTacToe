@@ -12,6 +12,7 @@ protocol GameProgressService {
     
     var winPublisher: PassthroughSubject<Move, Never> { get }
     var drawPublisher: PassthroughSubject<Void, Never> { get }
+    var isEvenMovePublisher: PassthroughSubject<Bool, Never> { get }
     var isAIСonsideringMovePublisher: PassthroughSubject<Bool, Never> { get }
     
     func makeMove(at index: Int)
@@ -22,6 +23,7 @@ final class GameProgressServiceImpl: GameProgressService {
     
     let winPublisher: PassthroughSubject<Move, Never> = PassthroughSubject()
     let drawPublisher: PassthroughSubject<Void, Never> = PassthroughSubject()
+    let isEvenMovePublisher: PassthroughSubject<Bool, Never> = PassthroughSubject()
     let isAIСonsideringMovePublisher: PassthroughSubject<Bool, Never> = PassthroughSubject()
     
     private var player: Move.Player {
@@ -62,7 +64,11 @@ final class GameProgressServiceImpl: GameProgressService {
     private var winPatterns: Set<Set<Int>> = [
         [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
     ]
-    private var isEvenMove: Bool = false
+    private var isEvenMove: Bool = false {
+        didSet {
+            isEvenMovePublisher.send(isEvenMove)
+        }
+    }
     private var lastMove: Move?
     
     private let appState: AppState

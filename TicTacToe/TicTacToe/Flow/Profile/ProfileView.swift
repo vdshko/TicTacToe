@@ -45,6 +45,7 @@ struct ProfileView: View {
             }
             .frame(height: 50.0)
         }
+        .preferredColorScheme(.dark)
     }
 }
 
@@ -53,7 +54,6 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             ProfileView(viewModel: .init(diContainer: .preview))
-                .preferredColorScheme(.dark)
         }
     }
 }

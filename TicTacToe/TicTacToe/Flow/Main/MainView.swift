@@ -22,11 +22,7 @@ struct MainView: View {
     var body: some View {
         VStack(spacing: Constants.interItemSpacing) {
             topBarView()
-            if isLandscape {
-                landscapeGameBoardView()
-            } else {
-                portraitGameBoardView()
-            }
+            orientedGameBoardView()
         }
         .alert(viewModel.alertTitle, isPresented: $viewModel.isAlertPresented) {
             Button(L10n.Alert.Button.restart) {
@@ -65,19 +61,50 @@ struct MainView: View {
     }
     
     @ViewBuilder
+    private func orientedGameBoardView() -> some View {
+        ZStack(alignment: .top) {
+            if isLandscape {
+                landscapeGameBoardView()
+            } else {
+                portraitGameBoardView()
+            }
+            
+            HStack(alignment: .top) {
+                VStack(spacing: 10.0) {
+                    Text(viewModel.firstPlayer)
+                        .foregroundColor(Asset.Colors.Standard.white)
+                        .font(.title2)
+                    if viewModel.isFirstPlayerTurn {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                    }
+                }
+                .frame(width: 100.0)
+                
+                Spacer()
+                
+                VStack(spacing: 10.0) {
+                    Text(viewModel.secondPlayer)
+                        .foregroundColor(Asset.Colors.Standard.white)
+                        .font(.title2)
+                    if !viewModel.isFirstPlayerTurn {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                    }
+                }
+                .frame(width: 100.0)
+            }
+            .padding(12.0)
+        }
+    }
+    
+    @ViewBuilder
     private func landscapeGameBoardView() -> some View {
         GeometryReader { geometry in
-            ZStack(alignment: .leading) {
-                HStack {
-                    Spacer()
-                    gameBoardView(for: geometry)
-                    Spacer()
-                }
-                if viewModel.isBoardLocked {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .padding()
-                }
+            HStack {
+                Spacer()
+                gameBoardView(for: geometry)
+                Spacer()
             }
         }
     }
@@ -85,17 +112,10 @@ struct MainView: View {
     @ViewBuilder
     private func portraitGameBoardView() -> some View {
         GeometryReader { geometry in
-            ZStack(alignment: .top) {
-                VStack {
-                    Spacer()
-                    gameBoardView(for: geometry)
-                    Spacer()
-                }
-                if viewModel.isBoardLocked {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .padding()
-                }
+            VStack {
+                Spacer()
+                gameBoardView(for: geometry)
+                Spacer()
             }
         }
     }

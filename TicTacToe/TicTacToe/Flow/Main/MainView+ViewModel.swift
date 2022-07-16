@@ -17,14 +17,16 @@ extension MainView {
         @Published var isProfileShown: Bool = false
         
         @Published private(set) var moves: [Move?] = []
-        @Published private(set) var isBoardLocked: Bool = false
+        @Published private(set) var isFirstPlayerTurn: Bool = true
         
         var alertTitle: String = ""
+        var firstPlayer: String = Move.Player.player1.rawValue
+        var secondPlayer: String {
+            return diContainer.appState.gameType == .singlePlayer ? Move.Player.computer.rawValue : Move.Player.player2.rawValue
+        }
         
         private let cancelBag: CancelBag = CancelBag()
         private let diContainer: DIContainer
-        
-        private var profileViewModelCancellable: AnyCancellable?
         
         init(diContainer: DIContainer) {
             self.diContainer = diContainer
@@ -40,10 +42,6 @@ extension MainView {
         }
         
         func handleItemTap(for index: Int) {
-            guard !isBoardLocked else {
-                return
-            }
-            
             diContainer.services.gameProgressService.makeMove(at: index)
         }
         
@@ -75,6 +73,10 @@ extension MainView {
                 .receive(on: DispatchQueue.main)
                 .delay(for: .milliseconds(100), scheduler: DispatchQueue.main)
                 .assignWeak(to: \.isAlertPresented, on: self)
+                .store(in: cancelBag)
+            diContainer.services.gameProgressService.isEvenMovePublisher
+                .map { !$0 }
+                .assignWeak(to: \.isFirstPlayerTurn, on: self)
                 .store(in: cancelBag)
             diContainer.services.gameProgressService.isAIСonsideringMovePublisher
                 .receive(on: DispatchQueue.main)
